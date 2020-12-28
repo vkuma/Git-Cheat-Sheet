@@ -92,5 +92,40 @@ git remote add origin https://github.com/vkuma/new-repo.git
 
 git push -u origin master
 ```
+Whe you push to origin use your user name: "vkuma" **not** your email "vkuma076@gmail.com"
 
-Love u
+
+## Add files to the staging area
+
+Files are not tracked by git unless you add them.  
+To add the files use the following:
+```bash
+git add -A
+```
+Now these files are added to the staging area.  
+To check status of files in your working directory, use the following:
+```bash
+git status
+```
+
+## Commiting files locally
+
+Use the command:
+```bash 
+git commit -m "commit message"
+```
+
+## Push to github master
+```bash
+git push -u origin master
+```
+
+## Disable Git Credential Manager
+Sometimes it just doesn't work. Open command terminal under admin. Use this to access the config of the system:
+```bash
+git config --edit --system
+```
+Then remove the ``helper = manager`` line so that it is no longer registered as a credential helper.
+
+Reference this [link](https://stackoverflow.com/questions/37182847/how-do-i-disable-git-credential-manager-for-windows#:~:text=OK%2C%20I%20discovered%20that%20you,registered%20as%20a%20credential%20helper)
+
